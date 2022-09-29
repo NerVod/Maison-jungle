@@ -1,7 +1,8 @@
-import { plantList } from "../datas/plantList"
-
+import { plantList } from "../datas/plantList";
+import "../styles/ShoppingList.css";
 
 function ShoppingList() {
+
 
     const categories = plantList.reduce(
         (accumulateur, plant) => 
@@ -11,14 +12,15 @@ function ShoppingList() {
 
     return (
         <div>
-                <ul>
+            <h2>Les types de plantes :</h2>
+                <ul className="lmj-categories">
                     {categories.map((cat) => (
                         <li key={cat}>{cat}</li>
                     ))}
                 </ul>
-                <ul>
+                <ul className="lmj-plant-list">
                     {plantList.map((plant) =>
-                    <li key={plant.id}>{plant.name} { (plant.isBestSale || plant.category === 'plante grasse') && <span>🔥</span>} </li>
+                    <li key={plant.id} className= "lmj-plant-item">{plant.name} {plant.isSpecialOffer && <div className="lmj-sales">Soldé 💰</div>}</li>
                     )}
                 </ul>
                 
