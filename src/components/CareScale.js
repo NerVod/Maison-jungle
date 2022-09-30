@@ -10,13 +10,25 @@ function CareScale({ scaleValue, careType }) {
   ) : (
     <img src={Water} alt='water-icon' />
   )
+
+
+  function alerteEntretien( {scaleValue, careType} ) {
+
+    const quantité = `${scaleValue === 1 ? "peu" : ''} ${scaleValue === 2 ? "modérement" : ''} ${scaleValue === 3 ? "beaucoup" : ''} `
+    const type = `${careType === "light" ? "de lumière" : "d'arrosage"}`
+
+
+        const message = `Cette plante requiert ${quantité} ${type} !` 
+
+        alert(message)
+  }
  
 
   return (
     <div>
       {range.map((rangeElement) =>
         scaleValue >= rangeElement ? (
-          <span key={rangeElement.toString()}>{scaleType}</span>
+          <span key={rangeElement.toString()} onClick={() => alerteEntretien({ scaleValue, careType })}>{scaleType}</span>
         ) : null
       )}
     </div>
