@@ -2,7 +2,8 @@ import { plantList } from "../datas/plantList";
 import "../styles/ShoppingList.css";
 import PlantItem from "./PlantItem";
 
-function ShoppingList() {
+function ShoppingList({ cart, updateCart }) {
+
   const categories = plantList.reduce(
     (accumulateur, plant) =>
       accumulateur.includes(plant.category)
@@ -21,13 +22,16 @@ function ShoppingList() {
       </ul>
       <ul className="lmj-plant-list">
         {plantList.map(({ id, cover, name, water, light}) => (
-            <PlantItem 
-                        id={id}
-                        cover={cover}
-                        name={name}
-                        water={water}
-                        light={light}
-            />
+            <div key={id}>
+              <PlantItem 
+                          id={id}
+                          cover={cover}
+                          name={name}
+                          water={water}
+                          light={light}
+                          />
+              <button onClick={() => updateCart(cart + 1 )}>Ajouter</button>
+            </div>
         ))}
       </ul>
     </div>

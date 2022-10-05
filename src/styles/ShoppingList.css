@@ -6,12 +6,18 @@
 	max-width: 800px;
 }
 
+.lmj-plant-list button {
+	margin-bottom: 25px;
+	margin-left: 10px;
+}
+
 .lmj-plant-item {
-	border: solid 2px black;
+	/* border: solid 2px black; */
 	border-radius: 10px;
 	height: 150px;
 	width: 150px;
 	margin: 10px;
+	margin-bottom: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
