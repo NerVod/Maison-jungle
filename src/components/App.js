@@ -3,13 +3,16 @@ import Cart from "./Cart";
 import ShoppingList from "./ShoppingList";
 // import QuestionForm from "./QuestionForm";
 import Footer from "./Footer";
+import "../styles/Layout.css"
 
 function App() {
   return (
           <div>
               <Banner />
+              <div className="lmj-layout-inner">
               <Cart />
               <ShoppingList />
+              </div>
               {/* <QuestionForm /> */}
               <Footer />
         </div>
