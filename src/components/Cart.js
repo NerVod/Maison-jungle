@@ -28,7 +28,7 @@ function Cart({cart, updateCart}) {
 
             <h3>Total: {total} € </h3>
 
-            <button onClick={() => updateCart(0)}>
+            <button onClick={() => updateCart([])}>
                 Vider le panier 
             </button>
 
