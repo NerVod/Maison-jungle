@@ -2,15 +2,15 @@ import { plantList } from "../datas/plantList";
 import "../styles/ShoppingList.css";
 import PlantItem from "./PlantItem";
 
-function ShoppingList({ cart, updateCart }) {
+function ShoppingList({ cart, updateCart, list, updateList }) {
 
-  const categories = plantList.reduce(
-    (accumulateur, plant) =>
-      accumulateur.includes(plant.category)
-        ? accumulateur
-        : accumulateur.concat(plant.category),
-    []
-  );
+  // const categories = plantList.reduce(
+  //   (accumulateur, plant) =>
+  //     accumulateur.includes(plant.category)
+  //       ? accumulateur
+  //       : accumulateur.concat(plant.category),
+  //   []
+  // );
 
  function addToCart(name, price) {
   const currentPlantSaved= cart.find((plant) => plant.name === name) 
@@ -28,17 +28,23 @@ function ShoppingList({ cart, updateCart }) {
   }
  } 
 
+ 
+let plantList2 = []
+ function filerCategories(categ) {
+    categ !== '' ? plantList2 = plantList.filter(plante => plante.category === categ ) : plantList2 = plantList
+ }
 
   return (
     <div>
-      <h2>Les types de plantes :</h2>
+      {/* <h2>Les types de plantes :</h2>
       <ul className="lmj-categories">
         {categories.map((cat) => (
           <li key={cat}>{cat}</li>
         ))}
-      </ul>
+      </ul> */}
       <ul className="lmj-plant-list">
-        {plantList.map(({ id, cover, name, water, light, price}) => (
+        {filerCategories(list)}
+        {plantList2.map(({ id, cover, name, water, light, price}) => (
             <div key={id}>
               <PlantItem 
                           id={id}
