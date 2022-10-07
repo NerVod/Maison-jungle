@@ -1,13 +1,24 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "../styles/Cart.css";
 
 
-function Cart({cart, updateCart}) {
+function Cart({cart, updateCart, list, updateList}) {
     // const monsteraPrix = 8;
     const [isOpen, setIsOpen] = useState(true)
     const total = cart.reduce(
         (acc, plantType) => acc + plantType.amount * plantType.price, 0
     )
+    
+    useEffect(() => {
+        total !== 0 ? document.title =`LMJ total: ${total} €`: document.title= "Maison Jungle"
+    }, [total])
+    useEffect(() => {
+        list !== '' ? document.title=`Catégorie ${list} ` : document.title="Maison Jungle"
+    }, [list])
+
+    useEffect(() => {
+        document.title ='Bienvenue dans la maison Jungle !'
+    }, [])
     
     return isOpen ? (
         <div className="lmj-cart">

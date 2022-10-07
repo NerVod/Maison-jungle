@@ -17,7 +17,7 @@ function App() {
           <div>
               <Banner />
               <div className="lmj-layout-inner">
-                <Cart cart={cart} updateCart={updateCart} />
+                <Cart cart={cart} updateCart={updateCart} list={list} updateList={updateList} />
                 <Categories list={list} updateList={updateList}/>
                 <ShoppingList 
                 cart={cart} updateCart={updateCart}
