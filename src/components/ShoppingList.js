@@ -4,14 +4,6 @@ import PlantItem from "./PlantItem";
 
 function ShoppingList({ cart, updateCart, list, updateList }) {
 
-  // const categories = plantList.reduce(
-  //   (accumulateur, plant) =>
-  //     accumulateur.includes(plant.category)
-  //       ? accumulateur
-  //       : accumulateur.concat(plant.category),
-  //   []
-  // );
-
  function addToCart(name, price) {
   const currentPlantSaved= cart.find((plant) => plant.name === name) 
 
@@ -36,12 +28,6 @@ let plantList2 = []
 
   return (
     <div>
-      {/* <h2>Les types de plantes :</h2>
-      <ul className="lmj-categories">
-        {categories.map((cat) => (
-          <li key={cat}>{cat}</li>
-        ))}
-      </ul> */}
       <ul className="lmj-plant-list">
         {filerCategories(list)}
         {plantList2.map(({ id, cover, name, water, light, price}) => (

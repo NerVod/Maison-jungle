@@ -17,3 +17,24 @@
 	text-transform: capitalize;
     overflow: hidden;
 }
+
+.lmj-cover-container {
+	position: relative;
+}
+
+.lmj-cover_price {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 45px;
+	padding: auto;
+	height: 40px;
+	font-size: 18px;
+	color: white;
+	background-color: green;
+	border-radius: 20px 12px 20px 3px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
