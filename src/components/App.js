@@ -18,11 +18,13 @@ function App() {
               <Banner />
               <div className="lmj-layout-inner">
                 <Cart cart={cart} updateCart={updateCart} list={list} updateList={updateList} />
-                <Categories list={list} updateList={updateList}/>
-                <ShoppingList 
-                cart={cart} updateCart={updateCart}
-                list={list} updateList={updateList}
-                />
+                <div className="backgroundZone">
+                  <Categories list={list} updateList={updateList}/>
+                  <ShoppingList
+                  cart={cart} updateCart={updateCart}
+                  list={list} updateList={updateList}
+                  />
+                </div>
               </div>
               <Footer />
         </div>

@@ -13,3 +13,18 @@
     height: 45px;
     width: 45px;
 }
+
+@media (prefers-reduced-motion: no-preference) {
+    .lmj-logo {
+      animation: lmj-logo-spin infinite 20s linear;
+    }
+  }
+
+@keyframes lmj-logo-spin {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}

@@ -31,7 +31,7 @@ let plantList2 = []
       <ul className="lmj-plant-list">
         {filerCategories(list)}
         {plantList2.map(({ id, cover, name, water, light, price}) => (
-            <div key={id}>
+            <div key={id} className="lmj-article">
               <PlantItem 
                           id={id}
                           cover={cover}

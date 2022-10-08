@@ -13,10 +13,12 @@ function PlantItem({ id, cover, name, water, light, price }) {
 				<img className='lmj-plant-item-cover' src={cover} alt={`${name} cover`} />
 				<div className='lmj-cover_price'>{price} €</div>
 			</div>
-			{name}
-			<div>
-				<CareScale careType='water' scaleValue={water} />
-				<CareScale careType='light' scaleValue={light} />
+			<div className='lmj-down-card'>
+				{name}
+				<div>
+					<CareScale careType='water' scaleValue={water} />
+					<CareScale careType='light' scaleValue={light} />
+				</div>
 			</div>
 		</li>
 	)
