@@ -12,6 +12,8 @@ function App() {
   const [cart, updateCart] = useState([])
 
   const [list, updateList] = useState('')
+
+  const [ isFooterShown, updateIsFooterShown] = useState([])
   
   return (
           <div>
@@ -26,7 +28,9 @@ function App() {
                   />
                 </div>
               </div>
-              <Footer />
+              <button onClick={() => updateIsFooterShown(!isFooterShown)}>Cacher le footer</button>
+              {isFooterShown && <Footer cart={cart} />}
+              {/* <Footer cart={cart} /> */}
         </div>
   )
 }

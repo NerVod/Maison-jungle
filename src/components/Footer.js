@@ -1,9 +1,31 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../styles/Footer.css'
 
-function Footer() {
+function Footer({ cart }) {
 	const [inputValue, setInputValue] = useState('')
+
+	// test des differents useEffects
+
+	// useEffect(() => {
+	// 	console.log('1 alerte s\'affiche à chaque rendu')
+	// });
+
+	// useEffect(() => {
+	// 	console.log("2 alerte s'affiche au premier rendu")
+	// }, []);
+
+	// useEffect(() => {
+	// 	console.log("3 s'affiche au premier rendu et au refresh du cart")
+	// },[cart])
+	
+	// useEffect(() => {
+	// 	return () =>
+	// 	console.log("4 s'affiche quanf footer est retiré ou ajouté au DOM")
+	// })
+
+
+	// fin test différents useEffects
 
 	function handleInput (e) {
 			setInputValue(e.target.value)
