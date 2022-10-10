@@ -19,6 +19,8 @@ function Cart({cart, updateCart, list, updateList}) {
     useEffect(() => {
         document.title ='Bienvenue dans la maison Jungle !'
     }, [])
+
+
     
     return isOpen ? (
         <div className="lmj-cart">
