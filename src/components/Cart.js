@@ -23,9 +23,9 @@ function Cart({cart, updateCart, list, updateList}) {
 
     function removeFromCart(name, amount) {
         const currentPlantSaved = cart.find((plant) => plant.name === name)
-        console.log(currentPlantSaved.amount)
 
         const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
+        
         if(currentPlantSaved.amount > 1) {
             currentPlantSaved.amount--
             updateCart([
