@@ -22,7 +22,7 @@ function App() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  
+
 
   return (
     <div>
@@ -45,7 +45,7 @@ function App() {
         </div>
       </div>
       <button onClick={() => updateIsFooterShown(!isFooterShown)}>
-        Cacher le footer
+        {isFooterShown ? "Cacher le formulaire de newsletter" : "Afficher le formulaire de newsletter"}
       </button>
       {isFooterShown && <Footer cart={cart} />}
       {/* <Footer cart={cart} /> */}

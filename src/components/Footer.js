@@ -34,7 +34,7 @@ function Footer({ cart }) {
 
 	function checkValidEmail (value) {
 		if (!value.includes('@')) {
-			alert('L\'email ne contient pas "@" ! ')
+			alert('La saisie n\'est pas un email valide ! ')
 		} else {
 			setInputValue(value)
 		}
