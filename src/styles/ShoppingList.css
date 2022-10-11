@@ -12,10 +12,7 @@
 }
 
 .lmj-plant-item {
-	/* border: solid 2px black; */
 	border-radius: 10px;
-	/* height: 150px; */
-	/* width: 150px; */
 	margin-bottom: 40px;
 	display: flex;
 	align-items: center;
@@ -26,7 +23,6 @@
 }
 
 .lmj-plant-item-cover {
-	/* border: 1px solid red; */
 	height: auto;
 	min-width: 100%;
 	margin: 0;

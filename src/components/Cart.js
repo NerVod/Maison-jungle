@@ -21,6 +21,22 @@ function Cart({cart, updateCart, list, updateList}) {
     }, [])
 
 
+    function removeFromCart(name, amount) {
+        const currentPlantSaved = cart.find((plant) => plant.name === name)
+        console.log(currentPlantSaved.amount)
+
+        const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
+        if(currentPlantSaved.amount > 1) {
+            currentPlantSaved.amount--
+            updateCart([
+                ...cartFilteredCurrentPlant, currentPlantSaved
+            ])
+        } else {
+            updateCart([...cartFilteredCurrentPlant])
+        }
+      
+       }
+
     
     return isOpen ? (
         <div className="lmj-cart">
@@ -28,14 +44,15 @@ function Cart({cart, updateCart, list, updateList}) {
             <button 
                 className="lmj-cart-toggle-button"
                 onClick={() => setIsOpen(false)}>
-                    fermer
+                    Fermer
             </button>
 
-            <h2>Panier</h2>
+            <h2>Mon Panier</h2>
 
             {cart.map(({ name, price, amount}, index) => (
-                <div key={`${name} - ${index}`}>
-                    {name} {price}€ x {amount}
+                <div className="lmj-cart-item" key={`${name} - ${index}`}>
+                    {name} {price} € x {amount}
+                    <button className="lmj-cart-remove-button" onClick={() => removeFromCart(`${name}`, `${amount}`)}>❌</button>
                 </div>
             ))}
 
