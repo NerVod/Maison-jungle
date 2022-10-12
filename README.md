@@ -3,16 +3,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 1 main page cart closed and empty, 
-![Coded by NerVod](Capture1.JPG)
+![Coded by NerVod](./src/assets/Capture1.JPG)
 
 2 cart open empty
-![Coded by NerVod](Capture2.JPG)
+![Coded by NerVod](./src/assets/Capture2.JPG)
 
 3 cart open with items : banner is updated
-![Coded by NerVod](Capture3.JPG)
+![Coded by NerVod](./src/assets/Capture3.JPG)
 
 4 cart closed with items / plantType selected : banner is still updated
-![Coded by NerVod](Capture4.JPG)
+![Coded by NerVod](./src/assets/Capture4.JPG)
 
 
 ## Available Scripts
