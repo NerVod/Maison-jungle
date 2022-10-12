@@ -2,7 +2,7 @@ import Sun from '../assets/sun.svg'
 import Water from '../assets/water.svg'
 
 
-function CareScale({ scaleValue, careType }) {
+function CareScale({ scaleValue, careType, name }) {
   const range = [1, 2, 3];
 
   const scaleType = careType === "light" ? (
@@ -12,13 +12,13 @@ function CareScale({ scaleValue, careType }) {
   )
 
 
-  function alerteEntretien( {scaleValue, careType} ) {
+  function alerteEntretien( {scaleValue, careType, name} ) {
 
     const quantité = `${scaleValue === 1 ? "peu" : ''} ${scaleValue === 2 ? "modérement" : ''} ${scaleValue === 3 ? "beaucoup" : ''} `
     const type = `${careType === "light" ? "de lumière" : "d'arrosage"}`
 
 
-        const message = `Cette plante requiert ${quantité} ${type} !` 
+        const message = `${name} a besoin de ${quantité} ${type} !` 
 
         alert(message)
   }
@@ -28,7 +28,7 @@ function CareScale({ scaleValue, careType }) {
     <div>
       {range.map((rangeElement) =>
         scaleValue >= rangeElement ? (
-          <span key={rangeElement.toString()} onClick={() => alerteEntretien({ scaleValue, careType })}>{scaleType}</span>
+          <span key={rangeElement.toString()} onClick={() => alerteEntretien({ scaleValue, careType, name })}>{scaleType}</span>
         ) : null
       )}
     </div>

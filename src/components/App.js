@@ -30,6 +30,7 @@ function App() {
       <Banner 
           isOpen={isOpen}
           setIsOpen={setIsOpen}
+          cart={cart}
       />
       <div className="lmj-layout-inner">
         <Cart

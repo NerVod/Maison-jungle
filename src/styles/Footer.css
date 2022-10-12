@@ -12,3 +12,12 @@
 .lmj-footer-elem {
 	margin-bottom: 10px;
 }
+
+.lmj-footer-input {
+	height: 30px;
+	width: 290px;
+}
+
+.lmj-footer-input button {
+	margin-left: 10px;
+}

@@ -2,7 +2,8 @@ import '../styles/PlantItem.css'
 import CareScale from './CareScale'
 
 function handleClick(plantName) {
-    alert(`🌟 Vous voulez acheter 1 ${plantName} ? 🌷 Excellent choix !  🌟`)
+    // alert(`🌟 Vous voulez acheter 1 ${plantName} ? 🌷 Excellent choix !  🌟`)
+	document.title=`${plantName}`
 }
 
 
@@ -16,8 +17,8 @@ function PlantItem({ id, cover, name, water, light, price }) {
 			<div className='lmj-down-card'>
 				{name}
 				<div>
-					<CareScale careType='water' scaleValue={water} />
-					<CareScale careType='light' scaleValue={light} />
+					<CareScale careType='water' scaleValue={water} name={name} />
+					<CareScale careType='light' scaleValue={light} name={name} />
 				</div>
 			</div>
 		</li>

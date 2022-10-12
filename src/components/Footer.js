@@ -53,14 +53,16 @@ function Footer({ cart }) {
 				Pour les passionné·e·s de plantes 🌿🌱🌵
 			</div>
 			<div className='lmj-footer-elem'>Laissez-nous votre mail :</div>
-			<input 
-				type="email" 
-				placeholder="votre email" 
-				value={inputValue}
-				onChange={handleInput}
-				onBlur={() => checkValidEmail(inputValue)}
-				></input>
-			<button onClick={() => validateEmail(inputValue)}>Valider l'Email</button>
+			<div className='lmj-footer-input'>
+				<input
+					type="email"
+					placeholder="Votre email"
+					value={inputValue}
+					onChange={handleInput}
+					onBlur={() => checkValidEmail(inputValue)}
+					></input>
+				<button onClick={() => validateEmail(inputValue)}>Valider l'Email</button>
+			</div>
 		</footer>
 	)
 }

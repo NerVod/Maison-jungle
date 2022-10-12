@@ -3,7 +3,8 @@
 	padding: 32px;
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 1600px;
+	max-width: 2200px;
+	margin: auto;
 }
 
 .lmj-plant-list button {
