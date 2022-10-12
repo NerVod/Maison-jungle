@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import "../styles/Cart.css";
 
 
-function Cart({cart, updateCart, list, updateList}) {
+function Cart({cart, updateCart, list, updateList, isOpen, setIsOpen}) {
     // const monsteraPrix = 8;
-    const [isOpen, setIsOpen] = useState(true)
+    // const [isOpen, setIsOpen] = useState(true)
     const total = cart.reduce(
         (acc, plantType) => acc + plantType.amount * plantType.price, 0
     )
@@ -25,7 +25,7 @@ function Cart({cart, updateCart, list, updateList}) {
         const currentPlantSaved = cart.find((plant) => plant.name === name)
 
         const cartFilteredCurrentPlant = cart.filter((plant) => plant.name !== name)
-        
+
         if(currentPlantSaved.amount > 1) {
             currentPlantSaved.amount--
             updateCart([
@@ -44,7 +44,7 @@ function Cart({cart, updateCart, list, updateList}) {
             <button 
                 className="lmj-cart-toggle-button"
                 onClick={() => setIsOpen(false)}>
-                    Fermer
+                    Fermer mon panier
             </button>
 
             <h2>Mon Panier</h2>

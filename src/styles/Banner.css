@@ -3,6 +3,15 @@
     text-align: right;
     padding: 32px;
     border-bottom: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lmg-banner-title {
+    width:350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .lmj-title {
@@ -28,3 +37,25 @@ to {
     transform: rotate(360deg);
 }
 }
+
+.lmj-liste {
+    display: flex;
+    align-self:flex-end;
+    height: 50px;
+    margin-bottom: -20px;
+    
+}
+.lmj-liste ul {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+
+}
+.lmj-liste li {
+    list-style-type: none;
+    margin: auto;
+    cursor: pointer;
+}
+
+

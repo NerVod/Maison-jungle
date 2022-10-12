@@ -13,6 +13,7 @@ function App() {
   
   const [isFooterShown, updateIsFooterShown] = useState([]);
 
+  const [isOpen, setIsOpen] = useState(false)
   
   const savedCart = localStorage.getItem("cart");
 
@@ -26,13 +27,18 @@ function App() {
 
   return (
     <div>
-      <Banner />
+      <Banner 
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+      />
       <div className="lmj-layout-inner">
         <Cart
           cart={cart}
           updateCart={updateCart}
           list={list}
           updateList={updateList}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
         />
         <div className="backgroundZone">
           <Categories list={list} updateList={updateList} />
