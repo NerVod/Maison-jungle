@@ -16,11 +16,18 @@
 
 .lmj-title {
     padding-left: 32px;
+    text-transform: capitalize;
 }
 
 .lmj-logo {
     height: 45px;
     width: 45px;
+}
+
+.lmj-logo-cart {
+    height: 20px;
+    width: 30px;
+    margin-bottom: -4px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -43,10 +50,10 @@ to {
     align-self:flex-end;
     height: 50px;
     margin-bottom: -20px;
-    
+    align-items: center;
 }
 .lmj-liste ul {
-    width: 200px;
+    width: 300px;
     display: flex;
     justify-content: space-between;
     padding-left: 0;
@@ -56,6 +63,12 @@ to {
     list-style-type: none;
     margin: auto;
     cursor: pointer;
+}
+
+.lmj-total {
+    margin-left: 5px;
+    font-weight: 600;
+    color: #31b572;
 }
 
 

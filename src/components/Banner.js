@@ -1,7 +1,14 @@
 import '../styles/Banner.css'
 import logo from '../assets/logo.png'
+import cartLogo from '../assets/cart.png'
 
-function Banner({isOpen, setIsOpen}) {
+function Banner({isOpen, setIsOpen,cart}) {
+
+    const total = cart.reduce(
+        (acc, plant) => acc + plant.amount
+        , 0
+    )
+
     return  (
     <div className="lmj-banner">
         <div className='lmj-liste'>
@@ -17,7 +24,7 @@ function Banner({isOpen, setIsOpen}) {
         <div className='lmj-liste'>
             <ul>
                 <li>Se connecter</li>
-                <li onClick={() => setIsOpen(!isOpen)} >Panier</li>
+                <li onClick={() => setIsOpen(!isOpen)} >Panier <img src={cartLogo} alt="logo cart" className='lmj-logo-cart' /> <span className='lmj-total'>{total}</span></li>
             </ul>
         </div>
     </div>

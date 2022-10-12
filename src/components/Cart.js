@@ -65,12 +65,12 @@ function Cart({cart, updateCart, list, updateList, isOpen, setIsOpen}) {
         </div>
     ) : (
         <div className="lmj-cart-closed">
-            <button 
+            {/* <button 
                 className="lmj-cart-toggle-button"
                 onClick={() => setIsOpen(true)}
                 >
                     Ouvrir le panier
-            </button>
+            </button> */}
 
         </div>
     )
