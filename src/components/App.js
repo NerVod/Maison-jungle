@@ -24,7 +24,6 @@ function App() {
   }, [cart]);
 
 
-
   return (
     <div>
       <Banner 

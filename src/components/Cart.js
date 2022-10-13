@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "../styles/Cart.css";
+import {motion} from 'framer-motion'
 
 
 function Cart({cart, updateCart, list, updateList, isOpen, setIsOpen}) {
@@ -39,6 +40,12 @@ function Cart({cart, updateCart, list, updateList, isOpen, setIsOpen}) {
 
     
     return isOpen ? (
+        <motion.nav
+            initial={{ translateX: -100}}
+            animate={{translateX: 0}}
+            transition={{ ease:'easeOut', duration: 1}}
+            >
+
         <div className="lmj-cart">
 
             <button 
@@ -63,13 +70,14 @@ function Cart({cart, updateCart, list, updateList, isOpen, setIsOpen}) {
             </button>
 
         </div>
+        </motion.nav>
     ) : (
         <div className="lmj-cart-closed">
             {/* <button 
                 className="lmj-cart-toggle-button"
                 onClick={() => setIsOpen(true)}
                 >
-                    Ouvrir le panier
+                Ouvrir le panier
             </button> */}
 
         </div>

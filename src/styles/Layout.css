@@ -1,6 +1,7 @@
 .lmj-layout-inner {
     display: flex;
     flex-direction: row;
+    overflow: hidden;
 }
 
 .backgroundZone {
